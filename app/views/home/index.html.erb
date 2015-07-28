@@ -1,0 +1,89 @@
+<h1>Give Number of each Subject.</h1>
+<div class="row-fluid">
+  <div class="span4"></div>
+  <div class="span5" style="display: inline">
+    <%= form_tag({:controller => :home, :action => :result}, :method => "get") do %>
+
+        <div style="display: inline-flex">
+        <p><b>Bangla 1st</b></p>
+        <%= text_field_tag "bangla_1", nil, :style => "font-size: 20px; width: 23%; text-align: center; margin-left: 16%;" %>
+        </div>
+        <br>
+
+        <div style="display: inline-flex">
+          <p><b>Bangla 2nd</b></p>
+          <%= text_field_tag "bangla_2", nil, :style => "font-size: 20px; width: 23%; text-align: center; margin-left: 14%;" %>
+        </div>
+        <br>
+
+        <div style="display: inline-flex">
+          <p><b>English 1st</b></p>
+          <%= text_field_tag "english_1", nil, :style => "font-size: 20px; width: 23%; text-align: center; margin-left: 15%;" %>
+        </div>
+        <br>
+
+        <div style="display: inline-flex">
+          <p><b>English 2nd</b></p>
+          <%= text_field_tag "english_2", nil, :style => "font-size: 20px; width: 23%; text-align: center; margin-left: 13%;" %>
+        </div>
+        <br>
+
+        <div style="display: inline-flex">
+          <p><b>Math</b></p>
+          <%= text_field_tag "math", nil, :style => "font-size: 20px; width: 26%; text-align: center; margin-left: 32%;" %>
+        </div>
+        <br>
+
+        <div style="display: inline-flex">
+          <p><b>Charu Karu</b></p>
+          <%= text_field_tag "charu", nil, :style => "font-size: 20px; width: 22%; text-align: center; margin-left: 12%;" %>
+        </div>
+        <br>
+
+        <div style="display: inline-flex">
+          <p><b>Krishi</b></p>
+          <%= text_field_tag "krishi", nil, :style => "font-size: 20px; width: 25%; text-align: center; margin-left: 30%;" %>
+        </div>
+        <br>
+
+        <div style="display: inline-flex">
+          <p><b>Bangladesh</b></p>
+          <%= text_field_tag "bangladesh", nil, :style => "font-size: 20px; width: 22%; text-align: center; margin-left: 15%;" %>
+        </div>
+        <br>
+
+        <div style="display: inline-flex">
+          <p><b>Sharirik</b></p>
+          <%= text_field_tag "sharirik", nil, :style => "font-size: 24px; width: 21%; text-align: center; margin-left: 20%;" %>
+        </div>
+        <br>
+
+        <div style="display: inline-flex">
+          <p><b>Religion</b></p>
+          <%= text_field_tag "religion", nil, :style => "font-size: 20px; width: 25%; text-align: center; margin-left: 24%;" %>
+        </div>
+        <br>
+
+        <div style="display: inline-flex">
+          <p><b>Science</b></p>
+          <%= text_field_tag "science", nil, :style => "font-size: 20px; width: 25%; text-align: center; margin-left: 27%;" %>
+        </div>
+        <br>
+
+        <div style="display: inline-flex">
+          <p><b>ICT</b></p>
+          <%= text_field_tag "ict", nil, :style => "font-size: 20px; width: 27%; text-align: center; margin-left: 38%;" %>
+        </div>
+        <br>
+
+        <div style="display: inline-flex">
+          <p><b>Kormo Shikkha</b></p>
+          <%= text_field_tag "kormo", nil, :style => "font-size: 20px; width: 20%; text-align: center; margin-left: 5%;" %>
+        </div>
+        <br>
+
+
+        <%= submit_tag "View Result",:class => "btn btn-default", :style => "margin-top:2%; width:15%" %>
+    <% end %>
+  </div>
+</div>
