@@ -20,22 +20,23 @@ class HomeController < ApplicationController
     @total_mark = bangla_1 + bangla_2 + english_1 + english_2 + math + charu + krishi
                   + bangladesh + sharirik + religion + science + ict + kormo
 
-    if bangla_1 >= 33 && bangla_1 <= 39
+    bangla = bangla_1 + bangla_2
+    if bangla >= 50 && bangla <= 59
       @gpa_b_1 = 1.0
       @grade_b_1 = "D"
-    elsif bangla_1 >= 40 && bangla_1 <= 49
+    elsif bangla >= 60 && bangla <= 74
       @gpa_b_1 = 2.0
       @grade_b_1 = "C"
-    elsif bangla_1 >= 50 && bangla_1 <= 59
+    elsif bangla >= 75 && bangla <= 89
       @gpa_b_1 = 3.0
       @grade_b_1 = "B"
-    elsif bangla_1 >= 60 && bangla_1 <= 69
+    elsif bangla >= 90 && bangla <= 104
       @gpa_b_1 = 3.5
       @grade_b_1 = "A-"
-    elsif bangla_1 >= 70 && bangla_1 <= 79
+    elsif bangla >= 105 && bangla <= 119
       @gpa_b_1 = 4.0
       @grade_b_1 = "A"
-    elsif bangla_1 >= 80 && bangla_1 <= 100
+    elsif bangla >= 120 && bangla <= 150
       @gpa_b_1 = 5.0
       @grade_b_1 = "A+"
     else
@@ -43,46 +44,47 @@ class HomeController < ApplicationController
       @grade_b_1 = "F"
     end
 
-    bangla_2 = bangla_2 * 2
-    if bangla_2 >= 33 && bangla_2 <= 39
-      @gpa_b_2 = 1.0
-      @grade_b_2 = "D"
-    elsif bangla_2 >= 40 && bangla_2 <= 49
-      @gpa_b_2 = 2.0
-      @grade_b_2 = "C"
-    elsif bangla_2 >= 50 && bangla_2 <= 59
-      @gpa_b_2 = 3.0
-      @grade_b_2 = "B"
-    elsif bangla_2 >= 60 && bangla_2 <= 69
-      @gpa_b_2 = 3.5
-      @grade_b_2 = "A-"
-    elsif bangla_2 >= 70 && bangla_2 <= 79
-      @gpa_b_2 = 4.0
-      @grade_b_2 = "A"
-    elsif bangla_2 >= 80 && bangla_2 <= 100
-      @gpa_b_2 = 5.0
-      @grade_b_2 = "A+"
-    else
-      @gpa_b_2 = 0.0
-      @grade_b_2 = "F"
-    end
+    # bangla_2 = bangla_2 * 2
+    # if bangla_2 >= 33 && bangla_2 <= 39
+    #   @gpa_b_2 = 1.0
+    #   @grade_b_2 = "D"
+    # elsif bangla_2 >= 40 && bangla_2 <= 49
+    #   @gpa_b_2 = 2.0
+    #   @grade_b_2 = "C"
+    # elsif bangla_2 >= 50 && bangla_2 <= 59
+    #   @gpa_b_2 = 3.0
+    #   @grade_b_2 = "B"
+    # elsif bangla_2 >= 60 && bangla_2 <= 69
+    #   @gpa_b_2 = 3.5
+    #   @grade_b_2 = "A-"
+    # elsif bangla_2 >= 70 && bangla_2 <= 79
+    #   @gpa_b_2 = 4.0
+    #   @grade_b_2 = "A"
+    # elsif bangla_2 >= 80 && bangla_2 <= 100
+    #   @gpa_b_2 = 5.0
+    #   @grade_b_2 = "A+"
+    # else
+    #   @gpa_b_2 = 0.0
+    #   @grade_b_2 = "F"
+    # end
 
-    if english_1 >= 33 && english_1 <= 39
+    english = english_1 + english_2
+    if english >= 50 && english <= 59
       @gpa_e_1 = 1.0
       @grade_e_1 = "D"
-    elsif english_1 >= 40 && english_1 <= 49
+    elsif english >= 60 && english <= 74
       @gpa_e_1 = 2.0
       @grade_e_1 = "C"
-    elsif english_1 >= 50 && english_1 <= 59
+    elsif english >= 75 && english <= 89
       @gpa_e_1 = 3.0
       @grade_e_1 = "B"
-    elsif english_1 >= 60 && english_1 <= 69
+    elsif english >= 90 && english <= 104
       @gpa_e_1 = 3.5
       @grade_e_1 = "A-"
-    elsif english_1 >= 70 && english_1 <= 79
+    elsif english >= 105 && english <= 119
       @gpa_e_1 = 4.0
       @grade_e_1 = "A"
-    elsif english_1 >= 80 && english_1 <= 100
+    elsif english >= 120 && english <= 150
       @gpa_e_1 = 5.0
       @grade_e_1 = "A+"
     else
@@ -90,29 +92,29 @@ class HomeController < ApplicationController
       @grade_e_1 = "F"
     end
 
-    english_2 = english_2 * 2
-    if english_2 >= 33 && english_2 <= 39
-      @gpa_e_2 = 1.0
-      @grade_e_2 = "D"
-    elsif english_2 >= 40 && english_2 <= 49
-      @gpa_e_2 = 2.0
-      @grade_e_2 = "C"
-    elsif english_2 >= 50 && english_2 <= 59
-      @gpa_e_2 = 3.0
-      @grade_e_2 = "B"
-    elsif english_2 >= 60 && english_2 <= 69
-      @gpa_e_2 = 3.5
-      @grade_e_2 = "A-"
-    elsif english_2 >= 70 && english_2 <= 79
-      @gpa_e_2 = 4.0
-      @grade_e_2 = "A"
-    elsif english_2 >= 80 && english_2 <= 100
-      @gpa_e_2 = 5.0
-      @grade_e_2 = "A+"
-    else
-      @gpa_e_2 = 0.0
-      @grade_e_2 = "F"
-    end
+    # english_2 = english_2 * 2
+    # if english_2 >= 33 && english_2 <= 39
+    #   @gpa_e_2 = 1.0
+    #   @grade_e_2 = "D"
+    # elsif english_2 >= 40 && english_2 <= 49
+    #   @gpa_e_2 = 2.0
+    #   @grade_e_2 = "C"
+    # elsif english_2 >= 50 && english_2 <= 59
+    #   @gpa_e_2 = 3.0
+    #   @grade_e_2 = "B"
+    # elsif english_2 >= 60 && english_2 <= 69
+    #   @gpa_e_2 = 3.5
+    #   @grade_e_2 = "A-"
+    # elsif english_2 >= 70 && english_2 <= 79
+    #   @gpa_e_2 = 4.0
+    #   @grade_e_2 = "A"
+    # elsif english_2 >= 80 && english_2 <= 100
+    #   @gpa_e_2 = 5.0
+    #   @grade_e_2 = "A+"
+    # else
+    #   @gpa_e_2 = 0.0
+    #   @grade_e_2 = "F"
+    # end
 
     if math >= 33 && math <= 39
       @gpa_m = 1.0
@@ -327,7 +329,7 @@ class HomeController < ApplicationController
     end
 
 
-    @avg_gpa = (@gpa_b_1 + @gpa_b_2 + @gpa_e_1 + @gpa_e_2 + @gpa_m + @gpa_c + @gpa_k + @gpa_b + @gpa_sh + @gpa_r + @gpa_sc + @gpa_ict + @gpa_kormo) / 13
+    @avg_gpa = (@gpa_b_1 + @gpa_e_1 + @gpa_m + @gpa_c + @gpa_k + @gpa_b + @gpa_sh + @gpa_r + @gpa_sc + @gpa_ict + @gpa_kormo) / 11
 
     if @avg_gpa >= 5.0
       @grade = "A+"
