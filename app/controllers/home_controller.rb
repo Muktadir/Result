@@ -17,8 +17,7 @@ class HomeController < ApplicationController
     ict = params[:ict].to_i
     kormo = params[:kormo].to_i
 
-    @total_mark = bangla_1 + bangla_2 + english_1 + english_2 + math + charu + krishi
-                  + bangladesh + sharirik + religion + science + ict + kormo
+    @total_mark = bangla_1 + bangla_2 + english_1 + english_2 + math + charu + krishi + bangladesh + sharirik + religion + science + ict + kormo
 
     bangla = bangla_1 + bangla_2
     if bangla >= 50 && bangla <= 59
